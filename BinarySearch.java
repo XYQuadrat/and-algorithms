@@ -1,8 +1,4 @@
-/**
- * BinarySearch
- */
 public class BinarySearch {
-
     public static void main(String[] args) {
         int[] array = {1, 3, 5, 6};
         System.out.println(binarySearch(array, 6));

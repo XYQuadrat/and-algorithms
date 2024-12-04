@@ -1,9 +1,6 @@
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
-/**
- * Prim
- */
 public class Prim {
     ArrayList<ArrayList<Pair>> graph;
 

@@ -8,12 +8,13 @@ public class BFS {
     private static boolean[] visited;
 
     public static void main(String[] args) {
+        // Build graph from input
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
 
         graph = new ArrayList<ArrayList<Integer>>();
         for (int i = 0; i < n; ++i) {
-            graph.add(new ArrayList<>());
+            graph.add(new ArrayList<Integer>());
         }
         visited = new boolean[n];
 
@@ -26,16 +27,17 @@ public class BFS {
 
         scanner.close();
 
+        // Start BFS from all vertices that aren't visited by then
         for (int i = 0; i < n; ++i) {
             if (!visited[i]) {
                 bfs(i);
             }
+
             for (boolean isVisited : visited) {
                 System.out.print(isVisited + " ");
             }
             System.out.println();
         }
-
     }
 
     private static void bfs(int start) {
@@ -45,6 +47,8 @@ public class BFS {
         while (!queue.isEmpty()) {
             int pos = queue.poll();
             visited[pos] = true;
+
+            // Add problem-specific logic that should be executed when visiting a vertex here
 
             for (int neighbor : graph.get(pos)) {
                 if (!visited[neighbor]) {
