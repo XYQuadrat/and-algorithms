@@ -1,6 +1,6 @@
 public class LongestIncreasingSubsequence {
     public static void main(String[] args) {
-        int[] values = { 1, 3, 4, 2, 0, 7, 5, 6 };
+        int[] values = {1, 3, 4, 2, 0, 7, 5, 6};
         System.out.println(longestIncreasingSubsequence(values));
     }
 

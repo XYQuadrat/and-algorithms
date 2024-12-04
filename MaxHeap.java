@@ -7,7 +7,7 @@ public class MaxHeap {
 
     public static void main(String[] args) {
         MaxHeap heap = new MaxHeap();
-        int[] values = { 3, 1, 5, 7, 9, 2 };
+        int[] values = {3, 1, 5, 7, 9, 2};
 
         heap.buildHeap(values);
         heap.printHeap();
@@ -36,7 +36,7 @@ public class MaxHeap {
     private void restoreHeap(int i) {
         while (2 * i + 1 < size) {
             int j = 2 * i + 1;
-            
+
             if (j + 1 < size && heap[j] > heap[j + 1]) {
                 ++j;
             }

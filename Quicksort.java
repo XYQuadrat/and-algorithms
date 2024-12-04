@@ -1,6 +1,6 @@
 public class Quicksort {
     public static void main(String[] args) {
-        int[] values = { 5, 1, 3, 2, 4 };
+        int[] values = {5, 1, 3, 2, 4};
         quicksort(values, 0, values.length);
 
         for (int i : values) {

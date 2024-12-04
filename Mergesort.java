@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Mergesort {
     public static void main(String[] args) {
-        int[] values = { 6, 1, 2, 3, 4, 4, 0 };
+        int[] values = {6, 1, 2, 3, 4, 4, 0};
         mergeSort(values);
 
         for (int i : values) {

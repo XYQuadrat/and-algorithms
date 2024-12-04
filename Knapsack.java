@@ -1,8 +1,8 @@
 public class Knapsack {
 
     public static void main(String[] args) {
-        int[] value = { 1, 10 };
-        int[] weight = { 1, 5 };
+        int[] value = {1, 10};
+        int[] weight = {1, 5};
         System.out.println(solve(value.length, 4, value, weight));
     }
 

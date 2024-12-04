@@ -7,7 +7,7 @@ public class BellmanFord {
     ArrayList<Edge> edges;
     int n;
 
-    public int[] bellmandFord(int start) {
+    public int[] bellmanFord(int start) {
         int[] distance = new int[n];
 
         for (int i = 0; i < n; ++i) {
