@@ -18,9 +18,7 @@ public class LongestCommonSubsequence {
             }
         }
 
-        String lcs = backtrackLCS(dp, a, b, n - 1, m - 1);
-
-        return lcs;
+        return backtrackLCS(dp, a, b, n - 1, m - 1);
     }
 
     private static String backtrackLCS(int[][] dp, String a, String b, int i, int j) {

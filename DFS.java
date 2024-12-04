@@ -10,7 +10,7 @@ public class DFS {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
 
-        graph = new ArrayList<ArrayList<Integer>>();
+        graph = new ArrayList<>();
         for (int i = 0; i < n; ++i) {
             graph.add(new ArrayList<>());
         }
@@ -34,15 +34,14 @@ public class DFS {
             }
             System.out.println();
         }
-
     }
 
-    public static void dfs(int pos) {
+    public static void dfsRecursive(int pos) {
         visited[pos] = true;
 
         for (int neighbor : graph.get(pos)) {
             if (!visited[neighbor]) {
-                dfs(neighbor);
+                dfsRecursive(neighbor);
             }
         }
     }

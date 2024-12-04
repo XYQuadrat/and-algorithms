@@ -8,7 +8,7 @@ public class FloydWarshall {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
 
-        edges = new ArrayList<Edge>();
+        edges = new ArrayList<>();
 
         while (scanner.hasNext()) {
             int u = scanner.nextInt();

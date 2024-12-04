@@ -5,8 +5,8 @@ public class Prim {
     ArrayList<ArrayList<Pair>> graph;
 
     public int prim() {
-        PriorityQueue<Pair> pq = new PriorityQueue<Pair>();
-        boolean visited[] = new boolean[graph.size()];
+        PriorityQueue<Pair> pq = new PriorityQueue<>();
+        boolean[] visited = new boolean[graph.size()];
         int weight = 0;
 
         pq.add(new Pair(0, 0));
@@ -43,13 +43,7 @@ public class Prim {
 
         @Override
         public int compareTo(Pair other) {
-            if (this.value < other.value) {
-                return -1;
-            } else if (this.value == other.value) {
-                return 0;
-            } else {
-                return 1;
-            }
+            return Integer.compare(this.value, other.value);
         }
     }
 }

@@ -11,7 +11,7 @@ public class Kruskal {
         n = scanner.nextInt();
         m = scanner.nextInt();
 
-        edges = new ArrayList<Edge>();
+        edges = new ArrayList<>();
         for (int i = 0; i < m; ++i) {
             int from = scanner.nextInt();
             int to = scanner.nextInt();
@@ -20,14 +20,14 @@ public class Kruskal {
         }
 
         scanner.close();
-        ArrayList<Edge> mst = kruskal(n, m);
+        ArrayList<Edge> mst = kruskal(n);
         for (Edge edge : mst) {
             System.out.println(edge);
         }
     }
 
-    public static ArrayList<Edge> kruskal(int n, int m) {
-        ArrayList<Edge> mst = new ArrayList<Edge>();
+    public static ArrayList<Edge> kruskal(int n) {
+        ArrayList<Edge> mst = new ArrayList<>();
         UnionFind unionFind = new UnionFind(n);
 
         Collections.sort(edges);

@@ -11,7 +11,7 @@ public class Dijkstra {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
 
-        graph = new ArrayList<ArrayList<Edge>>();
+        graph = new ArrayList<>();
         for (int i = 0; i < n; ++i) {
             graph.add(new ArrayList<>());
         }
@@ -33,7 +33,7 @@ public class Dijkstra {
     }
 
     private static int[] dijkstra(int start, int n) {
-        Queue<Edge> queue = new PriorityQueue<Edge>();
+        Queue<Edge> queue = new PriorityQueue<>();
         queue.add(new Edge(start, 0));
 
         int[] dist = new int[n];

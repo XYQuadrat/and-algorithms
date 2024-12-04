@@ -6,14 +6,14 @@ public class BellmanFord {
     private static ArrayList<Edge> edges;
     private static int n;
 
-    public static void main() {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int start = scanner.nextInt();
 
-        edges = new ArrayList<Edge>();
+        edges = new ArrayList<>();
 
-        while (scanner.hasNext()) {
+        for (int i = 0; i < n; i++) {
             int u = scanner.nextInt();
             int v = scanner.nextInt();
             int weight = scanner.nextInt();

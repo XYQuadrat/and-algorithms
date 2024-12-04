@@ -12,9 +12,9 @@ public class BFS {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
 
-        graph = new ArrayList<ArrayList<Integer>>();
+        graph = new ArrayList<>();
         for (int i = 0; i < n; ++i) {
-            graph.add(new ArrayList<Integer>());
+            graph.add(new ArrayList<>());
         }
         visited = new boolean[n];
 
