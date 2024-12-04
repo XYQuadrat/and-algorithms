@@ -1,13 +1,32 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
 
-/**
- * BellmanFord
- */
 public class BellmanFord {
-    ArrayList<Edge> edges;
-    int n;
+    private static ArrayList<Edge> edges;
+    private static int n;
 
-    public int[] bellmanFord(int start) {
+    public static void main() {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int start = scanner.nextInt();
+
+        edges = new ArrayList<Edge>();
+
+        while (scanner.hasNext()) {
+            int u = scanner.nextInt();
+            int v = scanner.nextInt();
+            int weight = scanner.nextInt();
+
+            edges.add(new Edge(weight, u, v));
+        }
+
+        scanner.close();
+
+        System.out.println(Arrays.toString(bellmanFord(start)));
+    }
+
+    public static int[] bellmanFord(int start) {
         int[] distance = new int[n];
 
         for (int i = 0; i < n; ++i) {
